@@ -12,59 +12,6 @@
 	    fbq('init', '2600509983589227');
 	    fbq('track', 'PageView');
 	    };
-	    
-	    const searchButton = document.getElementById('Search');
-	    const viewCategoryButton = document.getElementById('ViewCategory');
-	    const viewContentButton = document.getElementById('ViewContent');
-	    const addToCartButton = document.getElementById('AddToCart');
-	    const purchaseButton = document.getElementById('Purchase');
-	    
-	    searchButton.addEventListener('click', async event => {
-		    fbq('track', 'Search', {
-			    search_string: 'leather sandals',
-			    content_ids: ['1234', '2424', '1318', '6832'],
-			    content_type: 'product'
-		    });
-	    });
-	    
-	    viewCategoryButton.addEventListener('click', async event => {
-		    fbq('trackCustom', 'ViewCategory', {
-			    content_name: 'Really Fast Running Shoes',
-			    content_category: 'Apparel &amp; Accessories > Shoes',
-			    content_ids: ['1234', '2424', '1318', '6832'],
-			    content_type: 'product'
-		    });
-	    });
-	    
-	    viewContentButton.addEventListener('click', async event => {
-		    fbq('track', 'ViewContent', {
-			    content_ids: ['1234'],
-			    content_type: 'product',
-			    value: 0.50,
-			    currency: 'USD'
-		    });
-	    }); 
-	    
-	    addToCartButton.addEventListener('click', async event => {
-		    fbq('track', 'AddToCart', {
-			    content_ids: ['1234', '1853', '9386'],
-			    content_type: 'product',
-			    value: 3.50,
-			    currency: 'USD'
-		    });
-	    });
-	    
-	    purchaseButton.addEventListener('click', async event => {
-		    fbq('track', 'Purchase', {
-			    contents: [
-				    {'id': '1234', 'quantity': 2},
-				    {'id': '4642', 'quantity': 1}
-			    ],
-			    content_type: 'product',
-			    value: 21.97,
-			    currency: 'USD'
-		    });
-	    });
     </script>
     <noscript>
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2600509983589227&ev=PageView&noscript=1"/>
@@ -91,4 +38,58 @@
     <button id="AddToCart">AddToCart</button>
     <button id="Purchase">Purchase</button>
   </body>
+  <script>
+	  const searchButton = document.getElementById('Search');
+	  const viewCategoryButton = document.getElementById('ViewCategory');
+	  const viewContentButton = document.getElementById('ViewContent');
+	  const addToCartButton = document.getElementById('AddToCart');
+	  const purchaseButton = document.getElementById('Purchase');
+	    
+	  searchButton.addEventListener('click', async event => {
+		  fbq('track', 'Search', {
+			  search_string: 'leather sandals',
+			  content_ids: ['1234', '2424', '1318', '6832'],
+			  content_type: 'product'
+		  });
+	  });
+	    
+	  viewCategoryButton.addEventListener('click', async event => {
+		  fbq('trackCustom', 'ViewCategory', {
+			  content_name: 'Really Fast Running Shoes',
+			  content_category: 'Apparel &amp; Accessories > Shoes',
+			  content_ids: ['1234', '2424', '1318', '6832'],
+			  content_type: 'product'
+		  });
+	  });
+	    
+	  viewContentButton.addEventListener('click', async event => {
+		  fbq('track', 'ViewContent', {
+			  content_ids: ['1234'],
+			  content_type: 'product',
+			  value: 0.50,
+			  currency: 'USD'
+		  });
+	  }); 
+	    
+	  addToCartButton.addEventListener('click', async event => {
+		  fbq('track', 'AddToCart', {
+			  content_ids: ['1234', '1853', '9386'],
+			  content_type: 'product',
+			  value: 3.50,
+			  currency: 'USD'
+		  });
+	  });
+	    
+	  purchaseButton.addEventListener('click', async event => {
+		  fbq('track', 'Purchase', {
+			  contents: [
+				  {'id': '1234', 'quantity': 2},
+				  {'id': '4642', 'quantity': 1}
+			  ],
+			  content_type: 'product',
+			  value: 21.97,
+			  currency: 'USD'
+		  });
+	  });
+    </script>	
 </html>
