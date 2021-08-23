@@ -45,7 +45,7 @@
 	  const addToCartButton = document.getElementById('AddToCart');
 	  const purchaseButton = document.getElementById('Purchase');
 	    
-	  searchButton.addEventListener('click', async event => {
+	  searchButton.addEventListener('click', event => {
 		  fbq('track', 'Search', {
 			  search_string: 'leather sandals',
 			  content_ids: ['1234', '2424', '1318', '6832'],
@@ -53,7 +53,7 @@
 		  });
 	  });
 	    
-	  viewCategoryButton.addEventListener('click', async event => {
+	  viewCategoryButton.addEventListener('click', event => {
 		  fbq('trackCustom', 'ViewCategory', {
 			  content_name: 'Really Fast Running Shoes',
 			  content_category: 'Apparel &amp; Accessories > Shoes',
@@ -62,7 +62,7 @@
 		  });
 	  });
 	    
-	  viewContentButton.addEventListener('click', async event => {
+	  viewContentButton.addEventListener('click', event => {
 		  fbq('track', 'ViewContent', {
 			  content_ids: ['1234'],
 			  content_type: 'product',
@@ -71,7 +71,7 @@
 		  });
 	  }); 
 	    
-	  addToCartButton.addEventListener('click', async event => {
+	  addToCartButton.addEventListener('click', event => {
 		  fbq('track', 'AddToCart', {
 			  content_ids: ['1234', '1853', '9386'],
 			  content_type: 'product',
@@ -80,7 +80,7 @@
 		  });
 	  });
 	    
-	  purchaseButton.addEventListener('click', async event => {
+	  purchaseButton.addEventListener('click', event => {
 		  fbq('track', 'Purchase', {
 			  contents: [
 				  {'id': '1234', 'quantity': 2},
