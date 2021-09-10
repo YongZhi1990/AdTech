@@ -34,6 +34,7 @@
     <button id="viewcontent">ViewContent</button>
     <button id="addtocart">AddToCart</button>
     <button id="purchase">Purchase</button>
+    <button id="custom123">custom123</button>
     <div>
       <a href="/images/shirt.jpg"><img src="/images/shirt.jpg" alt="Shirt" border="0"></a>
     </div>    
@@ -44,6 +45,7 @@
 	  const viewContentButton = document.getElementById('viewcontent');
 	  const addToCartButton = document.getElementById('addtocart');
 	  const purchaseButton = document.getElementById('purchase');
+	  const custom123Button = document.getElementById('custom123');
 	    
 	  searchButton.addEventListener('click', event => {
 		  fbq('track', 'Search', {
@@ -89,6 +91,12 @@
 			  content_type: 'product',
 			  value: 21.97,
 			  currency: 'USD'
+		  });
+	  });
+	  
+	  custom123Button.addEventListener('click', event => {
+		  fbq('trackCustom', 'Custom123', {
+			  test_string: 'testparam'
 		  });
 	  });
     </script>	
