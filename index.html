@@ -44,6 +44,7 @@
     <button id="addtocart">AddToCart</button>
     <button id="purchase">Purchase</button>
     <button id="custom123">custom123</button>
+    <button id="duduptest">deduptest</button>
     <div>
       <a href="/images/shirt.jpg"><img src="/images/shirt.jpg" alt="Shirt" border="0"></a>
     </div>    
@@ -55,6 +56,7 @@
 	  const addToCartButton = document.getElementById('addtocart');
 	  const purchaseButton = document.getElementById('purchase');
 	  const custom123Button = document.getElementById('custom123');
+	  const deduptestButton = document.getElementById('duduptest');
 	    
 	  searchButton.addEventListener('click', event => {
 		  fbq('track', 'Search', {
@@ -108,5 +110,9 @@
 			  test_string: 'testparam'
 		  });
 	  });
+	  
+	  deduptestButton.addEventListener('click', event => {
+		  fbq('track', 'DedupTest', {}, {eventID: '123'})
+	  });	      	
     </script>	
 </html>
