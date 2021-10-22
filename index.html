@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8"/>
     <script>
+      if(!window.console) window.console = {};
+      var methods = ["log", "debug", "warn", "info", "dir", "dirxml", "trace", "profile", "fbq"];
+      for(var i=0;i<methods.length;i++){
+	      console[methods[i]] = function(){};
+      }     
+    </script>
+    <script>
       !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
       n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -114,5 +121,5 @@
 	  deduptestButton.addEventListener('click', event => {
 		  fbq('track', 'DedupTest', {}, {eventID: '123'})
 	  });	      	
-    </script>	
+    </script>
 </html>
