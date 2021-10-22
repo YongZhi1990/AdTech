@@ -58,19 +58,6 @@
 	  const custom123Button = document.getElementById('custom123');
 	  const deduptestButton = document.getElementById('duduptest');
 	  
-	  
-	  const disableDevtools = callback => {
-		  const original = Object.getPrototypeOf;
-		  Object.getPrototypeOf = (...args) => {
-			  if (Error().stack.includes("getCompletions")) callback();
-			  return original(...args);
-		  };
-	  };
-	  
-	  disableDevtools(() => {
-		  console.error("devtools has been disabled");
-		  while (1);
-	  });
 	    
 	  searchButton.addEventListener('click', event => {
 		  fbq('track', 'Search', {
