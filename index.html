@@ -118,8 +118,8 @@
 		  fbq('track', 'DedupTest', {}, {eventID: '123'})
 	  });
 	  
-	  deduptestButton.addEventListener('click', event => {
-		  fbq('track', 'PageView', {'customdata': 'customdata'});
+	  pageviewButton.addEventListener('click', event => {
+		  fbq('track', 'PageView2', {'customdata': 'customdata'});
 		  console.log("firing subsequent pageview")
 	  });
     </script>
