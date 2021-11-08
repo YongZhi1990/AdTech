@@ -45,6 +45,7 @@
     <button id="purchase">Purchase</button>
     <button id="custom123">custom123</button>
     <button id="duduptest">deduptest</button>
+    <button id="pageview">pageview</button>
     <div>
       <a href="/images/shirt.jpg"><img src="/images/shirt.jpg" alt="Shirt" border="0"></a>
     </div>    
@@ -57,6 +58,7 @@
 	  const purchaseButton = document.getElementById('purchase');
 	  const custom123Button = document.getElementById('custom123');
 	  const deduptestButton = document.getElementById('duduptest');
+	  const pageviewButton = document.getElementById('pageview');
 	  
 	    
 	  searchButton.addEventListener('click', event => {
@@ -114,6 +116,10 @@
 	  
 	  deduptestButton.addEventListener('click', event => {
 		  fbq('track', 'DedupTest', {}, {eventID: '123'})
-	  });	      	
+	  });
+	  
+	  deduptestButton.addEventListener('click', event => {
+		  fbq('track', 'PageView', {'customdata': 'customdata'})
+	  });
     </script>
 </html>
