@@ -49,8 +49,18 @@
     <button id="测试">测试</button>
     <div>
       <a href="https://test.supporttesting.cc/images/shirt.jpg"><img src="https://test.supporttesting.cc/images/shirt.jpg" alt="Shirt" border="0"></a>
-    </div>    
+    </div>
+    <div id="twilio-webchat-widget-root"></div>
   </body>
+  <script defer src="https://media.twiliocdn.com/sdk/js/webchat-v3/releases/3.3.0/webchat.min.js" integrity="sha256-ydLLXnNrb26iFUvKAHsYt9atwfzz0LNcgBmo0NmD5Uk=" crossorigin="anonymous"></script>
+  <script>
+  window.addEventListener("load", () => {
+    const appConfig = {
+       deploymentKey: "CV4c81861e0438bf147053a8d920907920"
+    }
+    Twilio.initWebchat(appConfig); 
+  })
+  </script>
   <script>
 	  const searchButton = document.getElementById('search');
 	  const viewCategoryButton = document.getElementById('viewcategory');
